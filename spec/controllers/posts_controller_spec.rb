@@ -11,7 +11,6 @@ RSpec.describe PostsController do
   let(:found) { Post.find(@article.id) }
 
   before { @article = Post.create!(attributes) }
-
   describe "showing a post" do
     it "shows a post" do
       get :show, params: { id: @article.id }
